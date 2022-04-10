@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'You Blockhead';
+    src: url('../fonts/You Blockhead.ttf') format('woff');
+}
+
+.title {
+    font-family: "You Blockhead", serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: red;
+
+}
 * {
-    background-color: #222222;
+    background-color: white;
 }
