@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "name": "clashle",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dizmac/clashle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dizmac/clashle/issues"
+  },
+  "homepage": "https://github.com/dizmac/clashle#readme"
+}
