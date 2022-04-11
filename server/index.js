@@ -1,3 +1,5 @@
+const path = require('path');
+
 const express = require('express');
 const dotenv = require('dotenv');
 
@@ -9,12 +11,12 @@ const app = express();
 dotenv.config();
 app.listen(process.env.DEBUG_PORT, () => console.log(`Backend Running @ Port ${process.env.DEBUG_PORT}`));
 
-
+app.use(express.static('www'));
 
 app.get('/', (req, res) => {
     let d = new Deck('Hi', 'Bye');
 
     console.log(d);
     
-    res.status(200).end('200 OK');
+    res.status(200).end(JSON.stringify(d));
 });
