@@ -1,6 +1,9 @@
+const Deck = require("./server/objects/Deck")
+
 function addToDeck(){
     console.log("addToDeck called")
     // TODO: make this work
+    Deck("elite_barbarians")
 }
 
 
