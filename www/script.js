@@ -1,6 +1,9 @@
-function addToDeck(){
-    console.log("addToDeck called")
-    // TODO: make this work
+let deck = [];
+function addToDeck(name){
+    if(!deck.includes(name)){
+        deck.push(name);
+    }
+    console.log(deck);
 }
 
 

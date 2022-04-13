@@ -14,7 +14,7 @@ app.listen(process.env.DEBUG_PORT, () => console.log(`Backend Running @ Port ${p
 app.use(express.static('www'));
 
 app.get('/deck', (req, res) => {
-    let d = new Deck('Hi', 'Bye');
+    let d = new Deck();
 
     console.log(d);
     
