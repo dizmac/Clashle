@@ -4,7 +4,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 
 
-const Deck = require('../objects/Deck');
+const Deck = require('./objects/Deck');
 const app = express();
 
 
