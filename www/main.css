@@ -12,6 +12,10 @@
     color: dodgerblue;
 }
 
+#card {
+    position: absolute;
+}
+
 body {
     background: url("./resources/img/background.png");
 }
