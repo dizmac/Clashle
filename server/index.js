@@ -13,7 +13,7 @@ app.listen(process.env.DEBUG_PORT, () => console.log(`Backend Running @ Port ${p
 
 app.use(express.static('www'));
 
-app.get('/', (req, res) => {
+app.get('/deck', (req, res) => {
     let d = new Deck('Hi', 'Bye');
 
     console.log(d);

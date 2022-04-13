@@ -13,4 +13,4 @@ const get = async path => {
     return await promise;
 }
 
-get('/').then(console.log);
+get('/deck').then(console.log);
