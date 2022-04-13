@@ -1,4 +1,4 @@
-const Card = require('../objects/Card');
+const Card = require('./Card');
 
 module.exports = function(...cards) {
     this.Cards = [];

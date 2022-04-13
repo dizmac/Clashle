@@ -1,5 +1,8 @@
+const Deck = require("../objects/Deck")
+let deck = new Deck()
 function addToDeck(){
     console.log("addToDeck called")
+    deck.Cards.push("elite_barbarians")
     // TODO: make this work
 }
 
