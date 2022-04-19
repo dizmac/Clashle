@@ -1,11 +1,3 @@
-let deck = [];
-function addToDeck(name){
-    if(!deck.includes(name)){
-        deck.push(name);
-    }
-    console.log(deck);
-}
-
 dragElement(document.getElementById("card"));
 
 function dragElement(elmnt) {
@@ -26,14 +18,25 @@ function dragElement(elmnt) {
     }
 
     function elementDrag(e) {
+        // TODO: add bottom border when all cards are on the page
+        let offsetRight = window.innerWidth - elmnt.offsetLeft - elmnt.offsetWidth;
         e = e || window.event;
         e.preventDefault();
         pos1 = pos3 - e.clientX;
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        if(elmnt.offsetLeft < 0) {
+            elmnt.style.left = "0px";
+        }
+        if(elmnt.offsetTop < 0) {
+            elmnt.style.top = "0px";
+        }
+        if(offsetRight < 0){
+            elmnt.style.left = window.screen.width - elmnt.offsetWidth + "px";
+        }
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     }
 
     function closeDragElement() {

@@ -3,7 +3,23 @@
     src: url('./fonts/You Blockhead.ttf') format('woff');
 }
 
-.title {
+body {
+    margin: 0;
+    padding: 0;
+    /* disable horizontal scroll */
+    max-width: 100%;
+    overflow-x: hidden;
+    /* ignore warning */
+    overflow-y: overlay;
+    background: url("./resources/img/page.png");
+}
+
+#header {
+    background: url("./resources/img/header.png");
+    padding: 5px 8px;
+}
+
+#title {
     font-family: "You Blockhead", serif;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 16px;
@@ -12,10 +28,15 @@
     color: dodgerblue;
 }
 
-#card {
-    position: absolute;
+#deck {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 15px;
 }
 
-body {
-    background: url("./resources/img/background.png");
+#card {
+    position: absolute;
+    cursor: move;
 }
+
