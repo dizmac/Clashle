@@ -18,7 +18,6 @@ function dragElement(elmnt) {
     }
 
     function elementDrag(e) {
-        // TODO: add bottom border when all cards are on the page
         let offsetRight = window.innerWidth - elmnt.offsetLeft - elmnt.offsetWidth;
         e = e || window.event;
         e.preventDefault();
@@ -26,6 +25,7 @@ function dragElement(elmnt) {
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
+        // TODO: add bottom border when all cards are on the page
         if(elmnt.offsetLeft < 0) {
             elmnt.style.left = "0px";
         }
@@ -37,6 +37,8 @@ function dragElement(elmnt) {
         }
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
         elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        // TODO: auto fit card into deck based on coords
+        console.log(`X: ${e.clientX}, Y: ${e.clientY}`)
     }
 
     function closeDragElement() {
