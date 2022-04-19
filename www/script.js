@@ -1,5 +1,10 @@
 dragElement(document.getElementById("card"));
 
+function placeCard(card) {
+    card.style.left = "440px"
+    card.style.top = "102px"
+}
+
 function dragElement(elmnt) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     if (document.getElementById(elmnt.id + "header")) {
