@@ -1,7 +1,7 @@
 dragElement(document.getElementById("card"));
 
 function placeCard(card) {
-    card.style.left = "440px"
+    card.style.left = "716px"
     card.style.top = "102px"
 }
 
