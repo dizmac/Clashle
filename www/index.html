@@ -8,36 +8,37 @@
 </head>
 
 <body>
-    <div id="header">
-        <a class="button" href="#h2p">
-            <img src="./resources/img/info.png" alt="">
-        </a>
+<div id="header">
+    <a class="button" href="#h2p">
+        <img src="./resources/img/info.png" alt="">
+    </a>
 
-        <div id="title">
-            <h2>Clash<span style="color:indianred">le</span></h2>
+    <div id="title">
+        <h2>Clash<span style="color:indianred">le</span></h2>
+    </div>
+</div>
+
+<div id="h2p" class="overlay">
+    <div class="popup">
+        <h2>How to play</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            placeholder text
         </div>
     </div>
+</div>
 
-    <div id="h2p" class="overlay">
-        <div class="popup">
-            <h2>How to play</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-                placeholder text
-            </div>
-        </div>
-    </div>
+<!-- TODO: make deck an image container or something instead of just a png -->
+<div id="deck">
+    <img src="./resources/img/deck.png" alt=""/>
+</div>
 
-    <div id="deck">
-        <img src="./resources/img/deck.png" alt=""/>
-    </div>
+<!-- TODO: add functionality for more cards -->
+<!-- card pngs must be 125 x 250 -->
+<div id="card">
+    <img src="./resources/img/elite_barbarians.png" ondblclick=placeCard(document.getElementById("card")) alt=""/>
+</div>
 
-    <!-- TODO: add functionality for more cards -->
-    <!-- card pngs must be 125 x 250 -->
-    <div id="card">
-        <img src="./resources/img/elite_barbarians.png" ondblclick=placeCard(document.getElementById("card")) alt=""/>
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
