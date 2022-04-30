@@ -6,7 +6,6 @@
 body {
     margin: 0;
     padding: 0;
-    max-width: 100%;
     overflow-x: hidden;
     overflow-y: overlay;
     background: url("./resources/img/page.png");
@@ -101,6 +100,7 @@ body {
 }
 
 #card {
-    position: absolute;
+    justify-content: left;
+    position: relative;
     cursor: pointer;
 }
