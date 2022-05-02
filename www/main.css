@@ -100,7 +100,10 @@ body {
 }
 
 #card {
-    justify-content: left;
+    display: flex;
+    /* changing justify-content center to left makes cards move with window resize/zoom */
+    justify-content: center;
     position: relative;
+    top: 10px;
     cursor: pointer;
 }
