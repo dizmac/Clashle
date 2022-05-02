@@ -1,15 +1,11 @@
-let deck = [];
+const deck = [];
 
-function placeCard(card) {
-    if (deck.length < 8) {
-        if(deck.length < 4) {
-            card.style.top = "-288px"
-            card.style.left = 716 + (deck.length * 121) + "px";
-        }else {
-            card.style.top = "-137px"
-            card.style.left = 716 + ((deck.length - 4) * 121) + "px";
-        }
-        deck.push(card)
+const placeCard = (card) => {
+    if(deck.length < 8) {
+        let adjust;deck.length === 0 || deck.length === 4 ? adjust = -182: adjust = -181;
+        deck.length < 4 ? card.style.top = "-288px": card.style.top = "-137px";
+        card.style.left = adjust + (121 * (deck.length - (4 * (deck.length >= 4)))) + "px";
+        deck.push(card);
     }
 }
 
