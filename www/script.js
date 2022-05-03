@@ -1,4 +1,4 @@
-const deck = [];
+let deck = [];
 
 const placeCard = (card) => {
     card = document.getElementById(card);
@@ -23,6 +23,6 @@ get('/deck').then(console.log);
 
 window.onload = () => {
     document.body.insertAdjacentHTML("beforeend", `<div class="card" id="angry_barbarian">
-    <img src="resources/img/cards/angry_barbarian.png" ondblclick=placeCard("elite_barbarians") alt=""/>
+    <img src="resources/img/cards/angry_barbarian.png" ondblclick=placeCard("angry_barbarian") alt=""/>
 </div>`)
 }
