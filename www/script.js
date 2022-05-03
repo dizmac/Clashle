@@ -21,8 +21,14 @@ const get = async path => {
 
 get('/deck').then(console.log);
 
-window.onload = () => {
-    document.body.insertAdjacentHTML("beforeend", `<div class="card" id="angry_barbarian">
-    <img src="resources/img/cards/angry_barbarian.png" ondblclick=placeCard("elite_barbarians") alt=""/>
-</div>`)
+window.onload = async () => {
+    let cards = await get('/cards');
+
+    for (let card of cards) {
+        document.body.insertAdjacentHTML('beforeend',
+        `<div class="card" id="${card}">
+        <img src="resources/img/cards/${card}.png" ondblclick=placeCard("${card}") alt=""/>
+        </div>`
+    )
+    }
 }
