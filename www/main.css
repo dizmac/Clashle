@@ -101,7 +101,7 @@ body {
 
 .card {
     display: flex;
-    /* changing justify-content center to left makes cards move with window resize/zoom */
+    /* changing justify-content center to left makes cards move with window resize/zoom and breaks placeCard px */
     justify-content: center;
     position: relative;
     top: 10px;

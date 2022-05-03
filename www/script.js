@@ -1,4 +1,4 @@
-const deck = [];
+let deck = [];
 
 const placeCard = (card) => {
     card = document.getElementById(card);
