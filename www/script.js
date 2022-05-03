@@ -1,6 +1,7 @@
 const deck = [];
 
 const placeCard = (card) => {
+    card = document.getElementById(card);
     if(deck.length < 8) {
         let adjust;deck.length === 0 || deck.length === 4 ? adjust = -182: adjust = -181;
         deck.length < 4 ? card.style.top = "-288px": card.style.top = "-137px";
@@ -19,3 +20,9 @@ const get = async path => {
 }
 
 get('/deck').then(console.log);
+
+window.onload = () => {
+    document.body.insertAdjacentHTML("beforeend", `<div class="card" id="angry_barbarian">
+    <img src="resources/img/cards/angry_barbarian.png" ondblclick=placeCard("elite_barbarians") alt=""/>
+</div>`)
+}
