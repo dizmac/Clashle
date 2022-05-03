@@ -99,7 +99,7 @@ body {
     top: 15px;
 }
 
-#card {
+.card {
     display: flex;
     /* changing justify-content center to left makes cards move with window resize/zoom */
     justify-content: center;
