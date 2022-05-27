@@ -3,9 +3,10 @@ let deck = [];
 const placeCard = (card) => {
     card = document.getElementById(card);
     if(deck.length < 8) {
-        let adjust;deck.length === 0 || deck.length === 4 ? adjust = -182: adjust = -181;
+        let adjust;
+        deck.length === 0 || deck.length === 4 ? adjust = -182: adjust = -181;
         deck.length < 4 ? card.style.top = "-288px": card.style.top = "-137px";
-        card.style.left = adjust + (121 * (deck.length - (4 * (deck.length >= 4)))) + "px";
+        card.style.left = adjust + (deck.length - (4 * (deck.length >= 4))) * 121 + "px";
         deck.push(card);
     }
 }
