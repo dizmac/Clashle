@@ -1,2 +1,2 @@
 # Clashle
-A wordle inspired clash royale game!
+A wordle variation for clash royale decks
